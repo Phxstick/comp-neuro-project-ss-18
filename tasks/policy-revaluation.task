@@ -1,0 +1,22 @@
+# let agent explore the maze
+set start to 1
+simulate 25000 steps
+
+# add a reward R1 and inform the agent locally
+place reward 10 at 2
+set start to 2
+simulate 1 step 20 times
+
+# let the agent find the reward R1 once from the starting position S1
+set start to 1
+simulate 1 time
+
+# add a second starting position S2 and let the agent find reward R1 repeatedly
+# from one of the two starting positions chosen uniformly at random
+set start to 1,3
+simulate 20 times
+
+# add a second reward R2, which is larger than R1, and inform the agent locally
+place reward 20 at 4
+set start to 4
+simulate 1 step 20 times

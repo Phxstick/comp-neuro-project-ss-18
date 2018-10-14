@@ -1,0 +1,8 @@
+# let agent explore the maze
+set start to 1
+simulate 25000 steps
+
+# add a reward and inform the agent locally
+place reward 10 at 2
+set start to 2
+simulate 1 step 20 times
